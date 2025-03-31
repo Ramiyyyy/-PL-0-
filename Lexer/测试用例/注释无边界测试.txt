@@ -1,0 +1,10 @@
+{const a=10;const b=20;
+var c;
+procedure p;
+     begin
+          c:=b+a
+     end;
+
+begin
+     call p
+end.

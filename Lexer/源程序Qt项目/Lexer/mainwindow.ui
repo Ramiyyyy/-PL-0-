@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1039</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>词法分析器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBoxInput">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>361</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>PL0源程序：</string>
+    </property>
+    <widget class="QTextEdit" name="textEdit1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>341</width>
+       <height>471</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxOutput">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>531</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>词法分析结果：</string>
+    </property>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>511</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>原值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>种别码</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>种类</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>行</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>列</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>250</y>
+      <width>91</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButtonAnalysis">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>开始分析</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonClearInput">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>清空输入</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonClearOutput">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>清空输出</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1039</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveResult"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>信息(&amp;I)</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionTable"/>
+    <addaction name="actionAuther"/>
+    <addaction name="actionName"/>
+    <addaction name="actionMail"/>
+    <addaction name="actionCtrl_S"/>
+    <addaction name="actionCtrl_Shift_S"/>
+    <addaction name="actionCtrl_O"/>
+    <addaction name="actionCtrl_1"/>
+    <addaction name="actionCtrl_2"/>
+    <addaction name="actionCtrl_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>操作(&amp;O)</string>
+    </property>
+    <addaction name="actionAnalysis"/>
+    <addaction name="actionClearInput"/>
+    <addaction name="actionClearOutput"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_O"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>打开(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionAnalysis">
+   <property name="text">
+    <string>分析(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionName">
+   <property name="text">
+    <string>Auther:纸上观星</string>
+   </property>
+  </action>
+  <action name="actionMail">
+   <property name="text">
+    <string>E-mail :w2645268651@outlook.com</string>
+   </property>
+  </action>
+  <action name="actionTable">
+   <property name="text">
+    <string>种别码表(&amp;T)</string>
+   </property>
+  </action>
+  <action name="actionClearInput">
+   <property name="text">
+    <string>清空输入(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionAuther">
+   <property name="text">
+    <string>作者(&amp;E)</string>
+   </property>
+  </action>
+  <action name="actionClearOutput">
+   <property name="text">
+    <string>清空输出(&amp;V)</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionSaveResult">
+   <property name="text">
+    <string>保存结果(&amp;R)</string>
+   </property>
+  </action>
+  <action name="actionCtrl_S">
+   <property name="text">
+    <string>Ctrl+S            保存输入文本</string>
+   </property>
+  </action>
+  <action name="actionCtrl_Shift_S">
+   <property name="text">
+    <string>Ctrl+Shift+S  保存分析结果</string>
+   </property>
+  </action>
+  <action name="actionCtrl_O">
+   <property name="text">
+    <string>Ctrl+O           打开文件</string>
+   </property>
+  </action>
+  <action name="actionCtrl_1">
+   <property name="text">
+    <string>Ctrl+1            开始分析</string>
+   </property>
+  </action>
+  <action name="actionCtrl_2">
+   <property name="text">
+    <string>Ctrl+2            清空输入</string>
+   </property>
+  </action>
+  <action name="actionCtrl_3">
+   <property name="text">
+    <string>Ctrl+3            清空输出</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
